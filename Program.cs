@@ -20,12 +20,24 @@ string[] InputArray(string num)
     return newArray;
 }
 
+int SearchSize(string[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length < 4) count ++;
+        
+    }
+    return count;
+}
 
 void main()
 {
     Console.Clear();
     string input = StringsInput("Введите строки через пробел или запятую");
-    string[] numArray = InputArray(input);
+    string[] inputArray = InputArray(input);
+    int finalArraySize = SearchSize(inputArray);
+    Console.WriteLine(finalArraySize);
 }
 
 main();
