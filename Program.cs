@@ -46,7 +46,11 @@ string[] ArraySorting (string[] array, int size)
     return newArray;
 }
 
-
+void PrintResult(string[] inputArray, string[] finalArray)
+{
+    Console.WriteLine($"Вы ввели строки: {String.Join(", ", inputArray)}");
+    Console.WriteLine($"Из них строки, длина которых меньше или равна 3 символа: {String.Join(", ", finalArray)}");
+}
 
 void main()
 {
@@ -55,8 +59,7 @@ void main()
     string[] inputArray = InputArray(input);
     int finalArraySize = SearchSize(inputArray);
     string[] finalArray = ArraySorting(inputArray, finalArraySize);
-
-    Console.WriteLine(finalArraySize);
+    PrintResult(inputArray, finalArray);
 }
 
 main();
